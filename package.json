@@ -1,0 +1,30 @@
+{
+  "name": "pi-monitor",
+  "version": "0.1.0",
+  "description": "Event-driven monitors for pi sessions: shell streams and file watchers that wake the session that started them.",
+  "keywords": ["pi-package", "pi", "extension", "monitor", "watcher"],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/smoke-test.js",
+    "pack:dry": "npm pack --dry-run --json",
+    "pi:load-check": "pi --offline --list-models __pi_monitor_load_check__"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "files": [
+    "extensions",
+    "examples",
+    "scripts",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "RELEASE.md",
+    "package.json"
+  ]
+}
