@@ -332,7 +332,7 @@ export default function piMonitorExtension(pi: ExtensionAPI) {
 						const panelWidth = Math.max(40, width);
 						const innerWidth = Math.max(20, panelWidth - 2);
 						const border = (text: string) => theme.fg("border", text);
-						const title = ` pi-monitor `;
+						const title = ` pi-event-monitor `;
 						const titleWidth = visibleLength(title);
 						const left = "─".repeat(Math.max(0, Math.floor((innerWidth - titleWidth) / 2)));
 						const right = "─".repeat(Math.max(0, innerWidth - titleWidth - left.length));
@@ -502,7 +502,7 @@ export default function piMonitorExtension(pi: ExtensionAPI) {
 	}
 
 		async function ensureStderrFile(id: string) {
-		const dir = await fsp.mkdtemp(path.join(os.tmpdir(), "pi-monitor-"));
+		const dir = await fsp.mkdtemp(path.join(os.tmpdir(), "pi-event-monitor-"));
 		await fsp.chmod(dir, 0o700).catch(() => undefined);
 		return path.join(dir, `${id}.stderr.log`);
 	}

@@ -1,4 +1,4 @@
-# pi-monitor examples
+# pi-event-monitor examples
 
 Shell monitors treat stdout as the event stream. Keep stdout selective.
 

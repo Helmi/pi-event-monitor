@@ -26,6 +26,7 @@ run("extension parses", () => {
 
 run("package manifest is a pi package", () => {
   const pkg = JSON.parse(readFileSync(packagePath, "utf8"));
+  if (pkg.name !== "pi-event-monitor") throw new Error(`unexpected package name: ${pkg.name}`);
   if (!pkg.keywords?.includes("pi-package")) throw new Error("missing pi-package keyword");
   if (!Array.isArray(pkg.pi?.extensions) || pkg.pi.extensions.length === 0) throw new Error("missing pi.extensions");
 });

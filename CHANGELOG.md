@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `pi-monitor` will be documented in this file.
+All notable changes to `pi-event-monitor` will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/).
 
@@ -26,5 +26,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Stdout truncation, batch caps, rate limits, and unterminated-line caps.
 - Stderr stored outside the session in private temp files capped at 1 MB.
 
-[Unreleased]: https://github.com/OWNER/pi-monitor/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/OWNER/pi-monitor/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Helmi/pi-event-monitor/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Helmi/pi-event-monitor/releases/tag/v0.1.0

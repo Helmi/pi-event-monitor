@@ -1,6 +1,6 @@
 # Release process
 
-`pi-monitor` uses [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`.
+`pi-event-monitor` uses [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH`.
 
 ## Version policy
 
@@ -65,7 +65,7 @@ npm publish --access public
 If publishing from git instead of npm, create a GitHub release for the tag and install with:
 
 ```sh
-pi install git:github.com/<owner>/pi-monitor@vX.Y.Z
+pi install git:github.com/Helmi/pi-event-monitor@vX.Y.Z
 ```
 
 ## Changelog discipline

@@ -1,14 +1,26 @@
 {
-  "name": "pi-monitor",
+  "name": "pi-event-monitor",
   "version": "0.1.0",
   "description": "Event-driven monitors for pi sessions: shell streams and file watchers that wake the session that started them.",
   "keywords": ["pi-package", "pi", "extension", "monitor", "watcher"],
   "license": "MIT",
+  "author": "Helmi",
+  "homepage": "https://github.com/Helmi/pi-event-monitor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helmi/pi-event-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Helmi/pi-event-monitor/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "scripts": {
     "test": "node scripts/smoke-test.js",
     "pack:dry": "npm pack --dry-run --json",
-    "pi:load-check": "pi --offline --list-models __pi_monitor_load_check__"
+    "pi:load-check": "pi --offline --list-models __pi_event_monitor_load_check__"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*",

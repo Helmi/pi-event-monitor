@@ -1,6 +1,6 @@
-# pi-monitor
+# pi-event-monitor
 
-Event-driven monitors for [pi](https://pi.dev) sessions. `pi-monitor` lets pi watch shell output or file changes in the background and wake the **same session that started the monitor** only when something happens.
+Event-driven monitors for [pi](https://pi.dev) sessions. `pi-event-monitor` lets pi watch shell output or file changes in the background and wake the **same session that started the monitor** only when something happens.
 
 Inspired by Claude Code's Monitor mechanic: stdout lines become events; silence costs no model calls.
 
@@ -23,32 +23,32 @@ Inspired by Claude Code's Monitor mechanic: stdout lines become events; silence 
 ### From npm, once published
 
 ```sh
-pi install npm:pi-monitor
+pi install npm:pi-event-monitor
 ```
 
 ### From git
 
 ```sh
-pi install git:github.com/<owner>/pi-monitor
+pi install git:github.com/Helmi/pi-event-monitor
 ```
 
 Pin a release tag for reproducible installs:
 
 ```sh
-pi install git:github.com/<owner>/pi-monitor@v0.1.0
+pi install git:github.com/Helmi/pi-event-monitor@v0.1.0
 ```
 
 ### From a local checkout
 
 ```sh
-git clone https://github.com/<owner>/pi-monitor.git
-pi install ./pi-monitor
+git clone https://github.com/Helmi/pi-event-monitor.git
+pi install ./pi-event-monitor
 ```
 
 ### Try without installing
 
 ```sh
-pi -e ./pi-monitor
+pi -e ./pi-event-monitor
 ```
 
 After installing into an already-running pi session, run:
@@ -254,7 +254,7 @@ npm publish --access public
 
 ## Package manifest
 
-`pi-monitor` is a normal pi package. `package.json` declares:
+`pi-event-monitor` is a normal pi package. `package.json` declares:
 
 ```json
 {
