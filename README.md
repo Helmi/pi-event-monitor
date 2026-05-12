@@ -61,13 +61,15 @@ or start a new pi session.
 
 ## Quick start
 
-Ask pi naturally:
+Two ways to use it — pick whichever you'd reach for.
+
+**Just tell pi what you want.** The agent has direct access to the monitor tools and will start one when it's the right move:
 
 ```text
 Start my dev server and monitor it for errors
 ```
 
-Or use explicit commands:
+**Or run a slash command** when you want direct control:
 
 ```text
 /monitor app errors :: tail -f app.log | grep --line-buffered -E "ERROR|WARN|FATAL"
@@ -132,6 +134,16 @@ The panel shows:
 - recent monitor events
 
 ## Examples
+
+### Talking to the agent
+
+Plain-English asks the agent can handle by reaching for the monitor tools itself:
+
+```text
+Watch the dev server and let me know if it crashes.
+When this build finishes, run the test suite.
+Tail app.log and wake me up on any ERROR or FATAL line.
+```
 
 ### Watch application logs
 
