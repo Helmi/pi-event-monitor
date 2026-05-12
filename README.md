@@ -1,8 +1,6 @@
 # pi-event-monitor
 
-Event-driven monitors for [pi](https://pi.dev) sessions. `pi-event-monitor` lets pi watch shell output or file changes in the background and wake the **same session that started the monitor** only when something happens.
-
-Inspired by Claude Code's Monitor mechanic: stdout lines become events; silence costs no model calls.
+Event-driven background monitors for [pi](https://pi.dev) sessions, modeled on the idea of how Claude Code implements this. `pi-event-monitor` runs shell commands in the background or watches files, and only wakes the **same session that started the monitor** when something happens — a process exits, a log line matches, a file gets written. No polling, no token cost between events.
 
 ## What it does
 
