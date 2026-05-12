@@ -56,7 +56,9 @@ Then push:
 git push origin main --follow-tags
 ```
 
-Publish to npm when ready:
+Pushing a `vX.Y.Z` tag triggers GitHub Actions to validate and publish to npm using the `NPM_TOKEN` repository secret.
+
+Manual fallback:
 
 ```sh
 npm publish --access public
@@ -80,6 +82,21 @@ Use `CHANGELOG.md` with these sections when relevant:
 - Removed
 
 Before `npm version`, move items from `Unreleased` into the new version section with the release date.
+
+## GitHub Actions setup
+
+The release workflow lives in `.github/workflows/release.yml` and runs on `v*.*.*` tags.
+
+Required repository secret:
+
+- `NPM_TOKEN` — npm automation token with publish access to `pi-event-monitor`.
+
+The workflow:
+
+1. Checks that the tag matches `package.json.version`.
+2. Installs pi for the load check.
+3. Runs `npm test`, `npm run pi:load-check`, and `npm run pack:dry`.
+4. Publishes with npm provenance.
 
 ## Compatibility notes
 
